@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Adohand's Kitchen</title>
+    </head>
+    <body>
+        <style>
+            body{display:flex;}
+            pre{white-space: pre-wrap;}
+            .input,.output,.preview .title,.preview .detail{width:50%;}
+            .submit{cursor:pointer;margin:0 auto;line-height:60px;border:1px solid black;background:green;width:200;font-family:sans-serif;text-align:center;}
+            .legendary-actions .title-block{display:none;}
+            .preview .title{font-weight:bold;margin-right:30px;}
+            .preview .detail{font-style:italic;}
+            .input>div{margin:10px auto;padding:10px;}
+            .input>div>div{margin:10px auto;}
+            section{text-align:center;font-style:italic;margin:30px auto 10px;}
+            #error{color:darkred;font-weight:bold;font-size:20px;}
+            .desc-block,.title-block{display:inline;margin-left:10px;}
+            .desc-input{width:500px;}
+            h1,h2{margin:0 0 5px;}
+            .input{border-right:1px solid black;}
+        </style>
+        <div class="input">
+            <h1>Input</h1>
+            <div class="special-traits block">
+                <h2>Special Traits</h2>
+                <button>Add field</button>
+            </div>
+            <div class="actions block">
+                <h2>Actions</h2>
+                <button>Add field</button>
+            </div>
+            <div class="legendary-actions block">
+                <h2>Legendary Actions</h2>
+                <button>Add field</button>
+            </div>
+            <div class="reactions block">
+                <h2>Reactions</h2>
+                <button>Add field</button>
+            </div>
+            <section>
+                <span>Please open the js console to see errors. CMD+ALT+J(mac)/CTRL+SHIFT+I(windows)</span>
+                <br />
+                <span>Press Esc within an input field to add another of the same type.</span>
+            </section>
+            <div class="submit" data-clipboard-target="#target">SUBMIT</div>
+        </div>
+        <div class="output">
+            <h1>Output</h1>
+            <pre id="target"></pre>
+            <div class="preview"></div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.13/clipboard.min.js"></script>
+        <script src="./code.js"></script>
+    </body>
+</html>
